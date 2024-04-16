@@ -3,7 +3,7 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 const cors = require("cors");
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 const USER_HEADER = `//later`;
 
 const app = express();
