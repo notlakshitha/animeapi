@@ -11,7 +11,8 @@ app.use(cors());
 
 app.get("/get", async (req, res) => {
   try {
-    const kawaiilinks = `https://kawaiifu.com/`;
+    const BASE_URL = "https://kawaiifu.com/";
+    const kawaiilinks = BASE_URL;
     const linkreq = await axios.get(kawaiilinks);
     const linkkawa = linkreq.data;
 
