@@ -4,7 +4,7 @@ const cheerio = require("cheerio");
 const cors = require("cors");
 
 const port = process.env.PORT || 3000;
-const USER_HEADER = `//later`;
+
 
 const app = express();
 app.use(cors());
