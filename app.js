@@ -23,6 +23,7 @@ app.get("/get", async (req, res) => {
 
     const mostwatched = []; // Holds the most watched anime array
 
+    // Ongoing series
     const ongoing = [];
 
     const spring = [];
@@ -52,7 +53,7 @@ app.get("/get", async (req, res) => {
         const rating = $(element).find(".fl-left").text().split('g:')[1].trim().split('(')[0].trim() || null;
 
 
-        mostwatched.push({ name, jname, link, view, image, decrip,id,release , genre, director, rating});
+        mostwatched.push({ name, jname, link, view, image, description,id,release , genre, director, rating});
       });
 
       $(".list-film:eq(1)")
