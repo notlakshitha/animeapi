@@ -21,7 +21,7 @@ app.get("/get", async (req, res) => {
 
     const $ = cheerio.load(linkkawa);
 
-    const mostwatched = [];
+    const mostwatched = []; // Holds the most watched anime array
 
     const ongoing = [];
 
