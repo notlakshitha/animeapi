@@ -43,7 +43,7 @@ app.get("/get", async (req, res) => {
         const link = $(element).find("a").attr("href") || null;
         const view = $(element).find(".view").text().split('g:')[1].trim() || null;
         const image = $(element).find("img").attr("src") || null;
-        const decrip = $(element).find(".cot1").text().trim() || null;
+        const description = $(element).find(".cot1").text().trim() || null;
         const id = link.split(".com")[1];
         const release = $(element).find(".vl-chil-date:first").text() || null;
         const genre = $(element).find(".vl-chil-date:eq(1)").map((index, element)=>
