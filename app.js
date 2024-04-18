@@ -189,7 +189,8 @@ app.get("/get", async (req, res) => {
 
     res.json({mostwatched,ongoing, spring, movies, tvseries, dub, music});
   } catch (e) {
-    console.log("error: ", e);
+    console.error("API Error: ", e);
+    res.status(500).json({ error: "Internal Server Error" });
   }
 });
 
