@@ -29,6 +29,7 @@ app.get("/get", async (req, res) => {
     // Spring season series
     const spring = [];
 
+    // Movie list
     const movies = [];
 
     const tvseries = [];
