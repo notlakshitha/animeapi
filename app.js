@@ -193,7 +193,10 @@ app.get("/get", async (req, res) => {
         music.push({ name, jname, link, view, image, decrip,id,release , genre, director, rating});
       });
 
-    res.json({mostwatched,ongoing, spring, movies, tvseries, dub, music});
+    res.json({
+      success: true,
+      data: { mostwatched, ongoing, spring, movies, tvseries, dub, music }
+    });
   } catch (e) {
     console.error("API Error: ", e);
     res.status(500).json({ error: "Internal Server Error" });
