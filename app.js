@@ -25,6 +25,7 @@ app.get("/get", async (req, res) => {
     const linkkawa = linkreq.data;
 
     const $ = cheerio.load(linkkawa);
+    // Pre-allocate arrays for performance
 
     const mostwatched = []; // Holds the most watched anime array
 
