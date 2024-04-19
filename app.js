@@ -22,6 +22,7 @@ app.get("/get", async (req, res) => {
     const BASE_URL = "https://kawaiifu.com/";
     const kawaiilinks = BASE_URL;
     const linkreq = await axios.get(kawaiilinks);
+    if (linkreq.status !== 200) throw new Error("Failed to fetch data");
     const linkkawa = linkreq.data;
 
     const $ = cheerio.load(linkkawa);
